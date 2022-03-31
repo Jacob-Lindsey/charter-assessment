@@ -1,8 +1,6 @@
 import styles from "./Filter.module.css";
 
-const Filter = ({ setAmount }) => {
-
-
+const Filter = ({ amount, setAmount }) => {
 
     return (
         <>
@@ -10,7 +8,7 @@ const Filter = ({ setAmount }) => {
             <div className={styles.container}>
                 <div className={styles.buttonWrapper}>
                     <button 
-                        className={styles.button}
+                        className={`${styles.button} ${amount === 50 ? styles.active : null}`}
                         onClick={() => setAmount(50)}
                     >
                         50
@@ -18,7 +16,7 @@ const Filter = ({ setAmount }) => {
                 </div>
                 <div className={styles.buttonWrapper}>
                     <button 
-                        className={styles.button}
+                        className={`${styles.button} ${amount === 100 ? styles.active : null}`}
                         onClick={() => setAmount(100)}
                     >
                         100
@@ -26,7 +24,7 @@ const Filter = ({ setAmount }) => {
                 </div>
                 <div className={styles.buttonWrapper}>
                     <button 
-                        className={styles.button}
+                        className={`${styles.button} ${amount === 150 ? styles.active : null}`}
                         onClick={() => setAmount(150)}
                     >
                         150
@@ -34,8 +32,8 @@ const Filter = ({ setAmount }) => {
                 </div>
                 <div className={styles.buttonWrapper}>
                     <button 
-                        className={styles.button}
-                        onClick={() => setAmount(250)}
+                        className={`${styles.button} ${amount === 200 ? styles.active : null}`}
+                        onClick={() => setAmount(200)}
                     >
                         200
                     </button>

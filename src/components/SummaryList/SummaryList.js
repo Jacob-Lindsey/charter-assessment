@@ -11,6 +11,7 @@ const SummaryList = ({ numMonths }) => {
     const [amount, setAmount] = useState(50);
 
     useEffect(() => {
+        // "Fetching" user data asynchronously using the Promise API
         fetchTransactions(getStartDate(numMonths), amount)
             .then(data => setMonths(data));
     }, [amount, numMonths]);
@@ -19,8 +20,11 @@ const SummaryList = ({ numMonths }) => {
         <>
             <div className={styles.header}>
                 <div className={styles.title}>REWARDS HISTORY</div>
-                <small className={styles.subtitle}>Currently showing {amount} purchases</small>
             </div>
+            <Filter 
+                amount={amount}
+                setAmount={setAmount}
+            />
             <div className={styles.container}>
                 {months.map(([month, data]) =>
                     <SummaryCard
@@ -30,7 +34,6 @@ const SummaryList = ({ numMonths }) => {
                     />
                 )}
             </div>
-            <Filter setAmount={setAmount} />
         </>
     )
 

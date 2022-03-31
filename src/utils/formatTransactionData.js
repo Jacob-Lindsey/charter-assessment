@@ -1,3 +1,4 @@
+// "Flattening" the data from the API response
 const dataReducer = (accumulator, { month, ...transaction }) => {
     const arr = accumulator[month] || [];
     arr.push(transaction);

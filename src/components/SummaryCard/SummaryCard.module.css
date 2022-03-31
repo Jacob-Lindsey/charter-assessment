@@ -3,6 +3,8 @@
     border: 1px solid hsl(0, 0%, 83%);
     border-radius: 4px;
     padding: 0.25rem;
+    transition: all 0.2s ease-in-out;
+    user-select: none;
 }
 
 .card {
@@ -52,7 +54,62 @@
     right: 0;
 }
 
-@media screen and (min-width: 768px) {    
+.history {
+    display: flex;
+    padding: 0.5rem 0.75rem;
+}
+
+.history:nth-child(even) {
+    background-color: hsl(0, 0%, 96.5%);
+}
+
+.historyLabel {
+    color: hsl(0, 0%, 26%);
+    flex: 1;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.historyLabel:first-child {
+    text-align: left;
+    text-indent: 0.5rem;
+}
+
+.historyLabel:last-child {
+    text-align: right;
+}
+
+.historySpent,
+.historyPoints {
+    font-size: 0.95rem;
+    font-weight: 400;
+}
+
+.historySpent {
+    flex: 1;
+    text-align: left;
+    text-indent: 0.5rem;
+}
+
+.historyPoints {
+    flex: 1;
+    text-align: right;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        cursor: pointer;
+        max-height: 160px;
+    }
+
+    .container:hover {
+        background-color: hsl(210, 43%, 92%);
+    }
+    
+    .tall {
+        max-height: none;
+    }
     .card {
         padding: 1rem 1.75rem 2rem;
         text-align: left;

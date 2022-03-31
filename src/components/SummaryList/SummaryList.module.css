@@ -8,11 +8,6 @@
     font-weight: 300;
 }
 
-.subtitle {
-    font-size: 1.25rem;
-    text-transform: uppercase;
-}
-
 .container {
     display: flex;
     flex-direction: column;

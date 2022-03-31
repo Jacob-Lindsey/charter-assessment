@@ -1,14 +1,14 @@
 .container {
     display: flex;
-    gap: 3rem;
+    gap: 1.5rem;
     justify-content: center;
     padding: 1.75rem 2rem;
 
 }
 
 .label {
-    padding-top: 2rem;
-    font-size: 1.35rem;
+    padding-top: 1.5rem;
+    font-size: 1.1rem;
     text-align: center;
     text-transform: uppercase;
 }
@@ -30,7 +30,21 @@
     width: 64px;
 }
 
+.active {
+    background-color: hsl(204, 82%, 48%);
+    border: 2px solid hsl(0, 0%, 90%);
+    color: hsl(180, 68%, 90%);
+}
+
 @media screen and (min-width: 768px) {
+    .container {
+        gap: 3rem;
+    }
+
+    .label {
+        font-size: 1.35rem;
+    }
+
     .button:hover {
         background-color: hsl(204, 94%, 80%);
     }
