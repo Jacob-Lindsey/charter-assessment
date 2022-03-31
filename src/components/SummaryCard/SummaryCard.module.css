@@ -1,0 +1,65 @@
+.container {
+    background-color: hsl(0, 0%, 93%);
+    border: 1px solid hsl(0, 0%, 83%);
+    border-radius: 4px;
+    padding: 0.25rem;
+}
+
+.card {
+    border: 1px solid hsl(0, 0%, 85%);
+    border-radius: 4px;
+    padding: 0.25rem 0.5rem 2rem;
+    position: relative;
+    text-align: center;
+}
+
+.cardHeader {
+    font-size: 1.75rem;
+    font-weight: 300;
+    padding: 0.75rem 1rem;
+    text-transform: uppercase;
+}
+
+.cardBody {
+    padding: 0 1rem;
+}
+
+.dataWrapper {
+
+}
+
+.label {
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.data {
+    font-size: 1rem;
+    font-weight: 400
+}
+
+.data strong {
+    margin-left: 0.2rem;
+}
+
+.expandIcon {
+    bottom: 0.25rem;
+    font-size: 1.25rem;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+}
+
+@media screen and (min-width: 768px) {    
+    .card {
+        padding: 1rem 1.75rem 2rem;
+        text-align: left;
+    }
+    
+    .cardHeader {
+        font-size: 1.5rem;
+        padding: 0.5rem 1rem;
+    }
+}
